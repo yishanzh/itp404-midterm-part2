@@ -1,0 +1,16 @@
+<h2>Sample Product List</h2>
+
+<ul>
+  {{#each model as |product|}}
+
+  <li>
+    {{#link-to "detail" product.id}}
+    {{product.name}} |
+     ${{product.price}}
+
+
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+{{outlet}}
